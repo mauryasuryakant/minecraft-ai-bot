@@ -1,0 +1,240 @@
+==================================================
+MINECRAFT AI BOT PROJECT
+Planning and Development Checkpoint Document
+==================================================
+
+PROJECT NAME
+Minecraft AI Companion Bot
+
+PROJECT PURPOSE
+Build a lightweight AI-driven Minecraft bot that can understand
+chat commands and perform automated tasks like mining, moving,
+collecting resources, and following the player.
+
+This bot is intended to become an intelligent in-game assistant.
+
+--------------------------------------------------
+GAME ENVIRONMENT
+--------------------------------------------------
+
+Game: Minecraft Java Edition
+Minecraft Version: 1.21.1
+World Type: Singleplayer opened to LAN
+Server Type: Local LAN Server
+Bot Framework: Mineflayer
+
+Bot Username: MiningBot
+
+Connection Example
+
+Host: localhost
+Port: (LAN port shown by Minecraft)
+Example: 54321
+
+--------------------------------------------------
+TECHNOLOGY STACK
+--------------------------------------------------
+
+Runtime
+Node.js
+
+Libraries
+
+Mineflayer
+Core bot framework that controls the Minecraft player.
+
+mineflayer-pathfinder
+Used for navigation and movement.
+
+mineflayer-collectblock
+Used for mining and collecting blocks automatically.
+
+minecraft-data
+Provides Minecraft block and item information.
+
+Programming Language
+JavaScript
+
+--------------------------------------------------
+PROJECT STRUCTURE
+--------------------------------------------------
+
+minecraft-ai-bot
+
+bot.js
+config.js
+planning-and-checkpoint.txt
+
+commands
+    goto.js
+    mine.js
+    follow.js
+    collect.js
+    stripmine.js
+    stop.js
+
+utils
+    parser.js
+
+package.json
+
+--------------------------------------------------
+CURRENT DEVELOPMENT PHASE
+--------------------------------------------------
+
+Phase 1: Bot Infrastructure
+
+Completed
+
+✔ Bot connects to Minecraft world
+✔ Bot successfully spawns
+✔ Chat event listener improved (using messagestr)
+✔ Command parser system created
+✔ Modular command structure implemented
+✔ Tool auto-switching implemented
+✔ Pathfinder feedback added
+
+--------------------------------------------------
+AVAILABLE BOT COMMANDS
+--------------------------------------------------
+
+Prefix: !
+
+1. Movement
+
+!goto X Y Z -> Moves to coordinates.
+!follow -> Follows the player.
+!come -> Walks to the player's current position.
+
+2. Mining & Collection
+
+!mine BLOCK_NAME -> Mines the nearest block.
+!collect BLOCK_NAME -> Collects nearby blocks (up to 5).
+!stripmine DIRECTION [DISTANCE] -> Starts a 1x2 tunnel.
+!scan BLOCK_NAME -> Finds the location of nearby blocks.
+
+3. Survival & Utility
+
+!status -> Shows health, hunger, and position.
+!eat -> Manually triggers eating from inventory.
+!sleep -> Finds and uses a nearby bed.
+!drop -> Drops all items in inventory.
+!stop -> Stops current actions.
+
+--------------------------------------------------
+SYSTEM ARCHITECTURE
+--------------------------------------------------
+
+Minecraft Chat
+      │
+      ▼
+Command Parser
+(utils/parser.js)
+      │
+      ▼
+Command Handler
+(commands folder)
+      │
+      ▼
+Mineflayer API & Plugins
+(utils/tools.js, auto-eat)
+      │
+      ▼
+Bot Movement / Survival / Actions
+
+
+--------------------------------------------------
+CURRENT STATUS
+--------------------------------------------------
+
+Bot Connection: WORKING
+Chat Listener: WORKING (messagestr)
+Command System: EXPANDED
+Mining Logic: IMPROVED (Tool auto-switching)
+Navigation: WORKING (Pathfinder feedback)
+Survival: IMPLEMENTED (Auto-eat, Sleep, Status)
+Automation: IMPROVED (Strip mining, Scan)
+
+--------------------------------------------------
+KNOWN ISSUES
+--------------------------------------------------
+
+1. Bot cannot follow players outside render distance.
+
+--------------------------------------------------
+NEXT DEVELOPMENT TASKS
+--------------------------------------------------
+
+Short Term Goals
+
+✔ Improve strip mining algorithm
+✔ Add better movement control
+✔ Add success/failure messages
+✔ Improve command parser
+✔ Add tool auto switching
+✔ Add basic survival (Eat, Sleep, Status)
+✔ Add utility commands (Come, Drop, Scan)
+
+Medium Term Goals
+
+Add inventory management
+Add chest storage system
+Add crafting automation
+
+Advanced Goals
+
+Ore detection system
+Automatic cave exploration
+Resource prioritization
+Autonomous mining AI
+Multiple bots working together
+
+--------------------------------------------------
+FUTURE COMMAND IDEAS
+--------------------------------------------------
+
+!scan ore
+Scan nearby area for ores.
+
+!store items
+Store inventory into nearby chest.
+
+!craft item
+Automatically craft items.
+
+!explore
+Autonomous exploration mode.
+
+!guard
+Protect player from mobs.
+
+--------------------------------------------------
+DEVELOPMENT CHECKPOINT LOG
+--------------------------------------------------
+
+Checkpoint 1
+
+✔ Project initialized
+✔ Dependencies installed
+✔ Basic bot connection created
+
+Checkpoint 2
+
+✔ Bot joins Minecraft world
+✔ Spawn event confirmed
+
+Checkpoint 3
+
+✔ Command parser created
+✔ Command folder structure implemented
+
+Checkpoint 4
+
+(Current)
+
+Bot can spawn and respond to commands.
+Next step is improving reliability and AI behavior.
+
+--------------------------------------------------
+END OF DOCUMENT
+--------------------------------------------------

@@ -1,0 +1,18 @@
+minecraft-ai-bot
+│
+├── bot.js
+├── config.js
+│
+├── commands
+│   ├── goto.js
+│   ├── mine.js
+│   ├── follow.js
+│   ├── stripmine.js
+│   ├── collect.js
+│   └── stop.js
+│
+├── utils
+│   ├── parser.js
+│   └── tools.js
+│
+└── package.json

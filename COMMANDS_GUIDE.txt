@@ -1,0 +1,77 @@
+==================================================
+MINECRAFT AI BOT - COMMANDS GUIDE
+==================================================
+
+This guide lists all available commands for the Minecraft AI Companion Bot.
+The default prefix is '!'.
+
+--------------------------------------------------
+BASIC COMMANDS
+--------------------------------------------------
+
+!status
+- Description: Shows the bot's current health, hunger level, and coordinates.
+- Usage: !status
+
+!come
+- Description: Makes the bot walk to your current position.
+- Usage: !come
+
+!eat
+- Description: Forces the bot to check its inventory for food and eat if hungry.
+- Usage: !eat
+- Note: The bot also has an 'auto-eat' feature enabled by default.
+
+!sleep
+- Description: The bot will look for a nearby bed and attempt to sleep in it.
+- Usage: !sleep
+
+!drop
+- Description: The bot will drop all items currently in its inventory.
+- Usage: !drop
+
+!stop
+- Description: Immediately stops any current task (mining, moving, following).
+- Usage: !stop
+
+--------------------------------------------------
+MOVEMENT & NAVIGATION
+--------------------------------------------------
+
+!goto X Y Z
+- Description: Moves the bot to the specified coordinates.
+- Usage: !goto 100 64 -200
+
+!follow
+- Description: Starts following the player who issued the command.
+- Usage: !follow
+
+--------------------------------------------------
+MINING & RESOURCE COLLECTION
+--------------------------------------------------
+
+!mine [BLOCK_NAME]
+- Description: Finds the nearest block of the specified type and mines it.
+- Usage: !mine diamond_ore
+- Note: Automatically equips the best tool.
+
+!collect [BLOCK_NAME]
+- Description: Finds up to 5 nearby blocks of the specified type and collects them.
+- Usage: !collect oak_log
+
+!stripmine [DIRECTION] [DISTANCE]
+- Description: Starts a 1x2 strip mine tunnel in a specific direction.
+- Directions: north, south, east, west.
+- Usage: !stripmine north 30
+
+!scan [BLOCK_NAME]
+- Description: Scans the area (64 block radius) for a specific block and reports if found.
+- Usage: !scan iron_ore
+
+--------------------------------------------------
+TIPS & TROUBLESHOOTING
+--------------------------------------------------
+- If the bot is stuck, use !stop.
+- Ensure the bot has food in its inventory for auto-eating.
+- Strip mining requires the bot to have pickaxes/tools for best results.
+==================================================
