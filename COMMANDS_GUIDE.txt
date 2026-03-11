@@ -31,8 +31,69 @@ BASIC COMMANDS
 - Usage: !drop
 
 !stop
-- Description: Immediately stops any current task (mining, moving, following).
+- Description: Immediately stops any current task (mining, moving, following, guarding).
 - Usage: !stop
+
+!inventory (or !inv)
+- Description: Lists all items currently in the bot's inventory.
+- Usage: !inventory
+
+!guard
+- Description: The bot will follow you and automatically attack nearby hostile mobs.
+- Usage: !guard
+
+!torch
+- Description: Places a torch at the bot's current feet position if it's dark.
+- Usage: !torch
+
+!pos
+- Description: Reports the bot's current coordinates.
+- Usage: !pos
+
+!xp
+- Description: Shows the bot's experience level and progress.
+- Usage: !xp
+
+!home [set]
+- Description: Returns to the set home position. Use '!home set' to mark a new home.
+- Usage: !home set
+- Usage: !home
+
+!lookat
+- Description: Makes the bot look directly at the player.
+- Usage: !lookat
+
+!give [item] [amount]
+- Description: Tosses a specified item and amount to you.
+- Usage: !give cobble 64
+
+!loot
+- Description: Bot will walk to and pick up the nearest item on the ground.
+- Usage: !loot
+
+!equip [item]
+- Description: Manually equips an item in the appropriate slot (armor or hand).
+- Usage: !equip iron_chestplate
+
+!deposit
+- Description: Deposits all non-essential items (not tools/food) into the nearest chest.
+- Usage: !deposit
+
+!fish
+- Description: Starts an automatic fishing loop. Use !stop to quit.
+- Usage: !fish
+
+!farm
+- Description: Harvests nearby fully grown wheat, carrots, or potatoes.
+- Usage: !farm
+
+!say [message]
+- Description: Makes the bot repeat your message in the chat.
+- Usage: !say Hello everyone!
+
+!smelt
+- Description: Opens a nearby furnace and puts in raw ores and fuel.
+- Usage: !smelt
 
 --------------------------------------------------
 MOVEMENT & NAVIGATION
@@ -67,6 +128,16 @@ MINING & RESOURCE COLLECTION
 !scan [BLOCK_NAME]
 - Description: Scans the area (64 block radius) for a specific block and reports if found.
 - Usage: !scan iron_ore
+
+!findvillage
+- Description: Scans for a nearby village (searching for bells or villagers within 128 blocks).
+- Usage: !findvillage
+
+!guide [TARGET]
+- Description: Leads you to a target (village or block name). The bot will wait for you if you fall behind.
+- Usage: !guide village
+- Usage: !guide diamond_ore
+- Note: You must be nearby when issuing the command.
 
 --------------------------------------------------
 TIPS & TROUBLESHOOTING

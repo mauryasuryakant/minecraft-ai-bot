@@ -105,6 +105,7 @@ Prefix: !
 !goto X Y Z -> Moves to coordinates.
 !follow -> Follows the player.
 !come -> Walks to the player's current position.
+!guide [TARGET] -> Leads you to a target (village/block).
 
 2. Mining & Collection
 
@@ -112,6 +113,7 @@ Prefix: !
 !collect BLOCK_NAME -> Collects nearby blocks (up to 5).
 !stripmine DIRECTION [DISTANCE] -> Starts a 1x2 tunnel.
 !scan BLOCK_NAME -> Finds the location of nearby blocks.
+!findvillage -> Finds nearby village coordinates.
 
 3. Survival & Utility
 

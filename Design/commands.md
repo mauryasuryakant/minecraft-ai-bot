@@ -71,6 +71,9 @@ Example Gameplay Session
 !collect oak_log
 !stripmine east
 !stop
+!findvillage
+!guide village
+!guide iron_ore
 """
 
 <!-- output_path = "/mnt/data/minecraft_bot_commands.txt"
