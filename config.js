@@ -1,6 +1,6 @@
 module.exports = {
   host: "localhost",
-  port: 25565,
-  username: "MiningBot",
+  port: 8080,
+  username: "Priya_Mm",
   commandPrefix: "!"
 }
